@@ -3,6 +3,7 @@ import Login from "./Components/Forms/Login";
 import Layout from "./Components/Layout/Layout";
 import ProtectedRoute from "./Components/Protected/ProtectedRout";
 import AdminDashboard from "./Components/Dashboard/AdminDashboard";
+import TrainerPage from "./Pages/TrainerPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
 
         {/* Admin dashboard page */}
         <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="trainer" element={<TrainerPage />} />
       </Route>
 
       {/* MEMBER AREA */}
@@ -37,7 +39,6 @@ function App() {
       >
         {/* 👇 Default route when visiting /member */}
         <Route index element={<Navigate to="dashboard" replace />} />
-
         {/* Member dashboard */}
         {/* <Route path="dashboard" element={<MemberDashboard />} /> */}
       </Route>

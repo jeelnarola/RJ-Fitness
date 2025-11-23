@@ -15,5 +15,13 @@ body{
 *{
   outline: none;
 }
+/* Remove default details/summary arrow */
+summary::-webkit-details-marker {
+  display: none !important;
+}
+
+summary::marker {
+  display: none !important;
+}
 
 
