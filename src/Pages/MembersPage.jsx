@@ -1,11 +1,8 @@
-import React from 'react'
 import SendLink from '../Components/Cards/SendLink'
 import { FiSend } from 'react-icons/fi'
 import { FaUserTie } from 'react-icons/fa'
-
-function TrainerPage() {
-
-  const totalBox = [
+function MembersPage() {
+   const totalBox = [
     {
       icon: <FiSend />,
       title: "Send Link",
@@ -17,11 +14,11 @@ function TrainerPage() {
     {
       icon: <FaUserTie />,
       title: "Trainer",
-      smallDesc: "Manage your trainers",
-      message: "Add new trainers details easily.",
-      btnTitel: 'Add Trainer',
+      smallDesc: "Manage your members",
+      message: "Add new members details easily.",
+      btnTitel: 'Add members',
       action: "route",     // 🔥 navigate to page
-      route: "/admin/trainer/add",
+      route: "/admin/members/add",
     }
   ]
   return (
@@ -37,4 +34,4 @@ function TrainerPage() {
   )
 }
 
-export default TrainerPage
+export default MembersPage

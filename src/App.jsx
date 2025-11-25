@@ -4,6 +4,7 @@ import Layout from "./Components/Layout/Layout";
 import ProtectedRoute from "./Components/Protected/ProtectedRout";
 import AdminDashboard from "./Components/Dashboard/AdminDashboard";
 import TrainerPage from "./Pages/TrainerPage";
+import MembersPage from "./Pages/MembersPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         {/* Admin dashboard page */}
         <Route path="dashboard" element={<AdminDashboard />} />
         <Route path="trainer" element={<TrainerPage />} />
+        <Route path="members" element={<MembersPage />} />
       </Route>
 
       {/* MEMBER AREA */}

@@ -39,6 +39,7 @@ const AdminMenuItems = [
   {
     name: "Members",
     icon: <FaUsers className="size-4" />,
+     path: "/admin/members" ,
     children: [
       { name: "Add Member", icon: <FaUserPlus className="size-3" />, path: "/admin/member/add" },
       { name: "Manage Member", icon: <FaTasks className="size-3" />, path: "/admin/member/manage" },
