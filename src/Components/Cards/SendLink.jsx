@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { postAPI } from "../../Store/DirectapiCall";
 
-export default function SendLinkCard({ data, onSend }) {
+export default  function SendLinkCard({ data, onSend }) {
   const modalRef = useRef(null);
   const inputRef = useRef(null);
   const navigate = useNavigate();
@@ -9,13 +10,21 @@ export default function SendLinkCard({ data, onSend }) {
   const openModal = () => modalRef.current.showModal();
   const closeModal = () => modalRef.current.close();
 
-  const handleSend = () => {
+  const handleSend = async() => {
     const value = inputRef.current.value.trim();
+    console.log(value);
+    
     if (!value) {
       alert("Please enter an email or mobile number");
       return;
     }
-    onSend && onSend(value);
+    // onSend && onSend(value);
+    const data= {
+      email: value,
+      link:'http://localhost:5173/add-trainer'
+    }
+    const postRes = await postAPI("/send/link", data);
+    console.log("Link sent response:", postRes);
     closeModal();
   };
 

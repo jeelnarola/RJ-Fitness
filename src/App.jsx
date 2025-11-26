@@ -5,12 +5,14 @@ import ProtectedRoute from "./Components/Protected/ProtectedRout";
 import AdminDashboard from "./Components/Dashboard/AdminDashboard";
 import TrainerPage from "./Pages/TrainerPage";
 import MembersPage from "./Pages/MembersPage";
+import AddTrainer from "./Components/Forms/AddTrainer";
 
 function App() {
   return (
     <Routes>
       {/* LOGIN */}
       <Route path="/login" element={<Login />} />
+      <Route path="/add-trainer" element={<AddTrainer />} />
 
       {/* ADMIN AREA */}
       <Route
